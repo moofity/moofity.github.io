@@ -1,0 +1,106 @@
+body {
+    background-color: #000; /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Hide overflow */
+    font-family: 'Racing Games', sans-serif;
+  }
+  
+  .neon-text {
+    text-align: center;
+    user-select: none;
+  }
+  
+  .neon-text div {
+    text-align: center;
+    color: #1CC5DC;
+    opacity: 0;
+    font-size: 2.5rem; /* Large font size */
+    line-height: 1; /* Tight line spacing */
+    animation: appear 0.5s forwards;
+    animation-delay: 0s; /* Default delay */
+  }
+  
+  .neon-text p {
+    font-size: 4rem; /* Large font size */
+    font-weight: bold; /* Bold font weight */
+    line-height: 1; /* Tight line spacing */
+    opacity: 0; /* Start with text invisible */
+    animation: neon-glow 3s infinite alternate, appear 0.5s forwards;
+    animation-delay: 0s; /* Default delay */
+  }
+  
+  /* Neon glow effect */
+  .neon-text p {
+    text-shadow:
+      0 0 5px #faeb2c, /* White glow */
+      0 0 10px #f52789, /* White glow */
+      0 0 20px #ffe700, /* Pink glow */
+      0 0 40px #e900ff, /* Pink glow */
+      0 0 60px #1685f8, /* Pink glow */
+      0 0 80px #3d144c, /* Pink glow */
+      0 0 100px #5e57ff; /* Pink glow */
+  }
+  
+  
+  /* Animation for neon glow */
+  @keyframes neon-glow {
+    from {
+      text-shadow: 0 0 5px #faeb2c;
+    }
+    to {
+      text-shadow:
+      0 0 5px #faeb2c, /* White glow */
+      0 0 10px #f52789, /* White glow */
+      0 0 20px #ffe700, /* Pink glow */
+      0 0 40px #e900ff, /* Pink glow */
+      0 0 60px #1685f8, /* Pink glow */
+      0 0 80px #3d144c, /* Pink glow */
+      0 0 100px #5e57ff; /* Pink glow */
+    }
+  }
+  
+  /* Animation for making text appear */
+  @keyframes appear {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Delayed animation for each line */
+  .neon-text p:nth-child(1) {
+    animation-delay: 1s;
+    color: #542E71;
+  }
+  
+  .neon-text p:nth-child(2) {
+    animation-delay: 2s;
+    color: #FB3640;
+  }
+  
+  .neon-text p:nth-child(3) {
+    animation-delay: 3s;
+    cursor: grab;
+    color: #FDCA40;
+  }
+  
+  .neon-text p:nth-child(4) {
+    animation-delay: 4.5s;
+    color: #A799B7;
+  }
+  
+  .neon-text div:nth-child(5) {
+    animation-delay: 6.5s;
+    font-size: 2rem;
+    margin-top: 100px;
+  }
+  
+  .neon-text div:nth-child(6) {
+    animation-delay: 7.7s;
+    font-size: 2rem;
+  }
+  
+  
